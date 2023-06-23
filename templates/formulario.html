@@ -7,28 +7,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
   <script src="validation.js"></script>
+</head>
+
+<body>
   <header>
-    <div class="container-hero">
-      <div class="container hero">
-        <div class="customer-support">
-          <i class="fa-solid fa-headset"></i>
-        </div>
-        <div class="container-logo">
-          <i class="fa-solid fa-mug-hot"></i>
-          <h1 class="logo"><a href="/">Inmobiliaria Casa Ideal</a></h1>
-        </div>
+  <div class="container-hero">
+    <div class="container hero">
+      <div class="customer-support">
+        <i class="fa-solid fa-headset"></i>
+      </div>
+      <div class="container-logo">
+        <i class="fa-solid fa-mug-hot"></i>
+        <h1 class="logo"><a href="/">Inmobiliaria Casa Ideal</a></h1>
       </div>
     </div>
+  </div>
   </header>
-
-</head>
-<body>
-  <button class="button" onclick="mostrarVista('DatosCliente')">Datos cliente</button>
-  <button class="button" onclick="mostrarVista('RequisitosGenerales')">Requisitos generales</button>
-  <button class="button" onclick="mostrarVista('RequisitosEspecificos')">Requisitos especificos</button>
-  <section>
-  <div class="vistaDatosCliente">
-  <div class="form-box">
+  <div class="navigation">
+    <ul>
+      <li><a href="#datos" data-toogle="tab">Datos cliente</a></li>
+      <li><a href="#requisitos1" data-toogle="tab">Requisitos generales</a></li>
+      <li><a href="#requisitos2" data-toogle="tab">Requisitos especificos</a></li>
+    </ul>
+  </div>
+  <div class="tab-content">
+  <div class="tab-pane" id="datos">
+    <div class="form-box">
     <div class="form-value">
     <form action="guardar_cliente.php" method="POST" onsubmit="return validateForm()">
     
@@ -59,17 +63,29 @@
     </div>
   </div>
   </div>
-</section>
-<section>
-  <div class="vistaRequisitosGenerales">
+
+  <div class="tab-pane" id="requisitos1">
     <h1>requisitos-generales</h1>
   </div>
-</section>
-<section>
-  <div class="vistaRequisitosEspecificos">
+
+  <div class="tab-pane" id="requisitos2">
     <h1>requisitos-especificos</h1>
   </div>
-</section>
+  </div>
+  <div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+    <div class="wizard-footer height-wizard">
+        <div class="pull-right">
+            <input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm siguiente' name='next' value='Siguiente'/>
+            <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='Fin' />
+        </div>
+    </div>
+    </div>
+  </div>
+
 </body>
 </html>
 

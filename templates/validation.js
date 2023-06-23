@@ -48,7 +48,7 @@ function mostrarVista(vista) {
   var vistaSeleccionada = document.getElementsByClassName('vista' + vista);
   for (var i = 0; i < vistaSeleccionada.length; i++) {
     vistaSeleccionada[i].style.display = 'block';
-    var formularioSeleccionado = vistaSeleccionada[i].getElementsByTagName('form')[0];
+    var formularioSeleccionado = vistaSeleccionada[i].getElementsByClassName('form')[0];
     if (formularioSeleccionado) {
       formularioSeleccionado.style.display = 'block';
     }
