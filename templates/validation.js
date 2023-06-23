@@ -34,23 +34,3 @@ function validateForm() {
 
     return true;
   }
-
-  
-function mostrarVista(vista) {
-  // Ocultar todas las vistas
-  var vistas = document.getElementsByClassName('vista');
-  for (var i = 0; i < vistas.length; i++) {
-    vistas[i].style.display = 'none';
-    form.style.display = 'none';
-
-  }
-  // Mostrar la vista seleccionada
-  var vistaSeleccionada = document.getElementsByClassName('vista' + vista);
-  for (var i = 0; i < vistaSeleccionada.length; i++) {
-    vistaSeleccionada[i].style.display = 'block';
-    var formularioSeleccionado = vistaSeleccionada[i].getElementsByClassName('form')[0];
-    if (formularioSeleccionado) {
-      formularioSeleccionado.style.display = 'block';
-    }
-  }
-}

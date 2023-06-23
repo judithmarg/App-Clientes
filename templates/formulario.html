@@ -25,9 +25,9 @@
   </header>
   <div class="navigation">
     <ul>
-      <li><a href="#datos" data-toogle="tab">Datos cliente</a></li>
-      <li><a href="#requisitos1" data-toogle="tab">Requisitos generales</a></li>
-      <li><a href="#requisitos2" data-toogle="tab">Requisitos especificos</a></li>
+      <li class="button"><a href="#datos" data-toogle="tab">Datos cliente</a></li>
+      <li class="button"><a href="#requisitos1" data-toogle="tab">Requisitos generales</a></li>
+      <li class="button"><a href="#requisitos2" data-toogle="tab">Requisitos especificos</a></li>
     </ul>
   </div>
   <div class="tab-content">
@@ -65,25 +65,87 @@
   </div>
 
   <div class="tab-pane" id="requisitos1">
-    <h1>requisitos-generales</h1>
+    <div class="form-box">
+      <div class="form-value">
+      <form action="guardar_cliente.php" method="POST" onsubmit="return validateForm()">
+      
+        <h2>Requisitos generales</h2>
+        <label for="codInteres">Codigo Interes:</label>
+        <input type="text" id="codInteres" name="codInteres" required>
+  
+        <label for="zonaPreferencia">Zona de preferencia:</label>
+        <input type="text" id="zonaPreferencia" name="zonaPreferencia" required>
+  
+        <label for="presupuestoCliente">Presupuesto del cliente:</label>
+        <input type="number" id="presupuestoCliente" name="presupuestoCliente" required>
+  
+        <label for="nroHabitacionMax">Nro habitacion max:</label>
+        <input type="number" id="nroHabitacionMax" name="nroHabitacionMax" required>
+  
+        <label for="nroHabitacionMin">Nro habitacion min:</label>
+        <input type="number" id="nroHabitacionMin" name="nroHabitacionMin" required>
+  
+        <label for="tienePiscina">¿Tiene piscina?</label>
+        <input type="text" id="tienePiscina" name="tienePiscina" required>
+  
+        <label for="tieneTerraza">¿Tiene terraza?</label>
+        <input type="text" id="tieneTerraza" name="tieneTerraza" required>
+  
+        <label for="tieneJardin">¿Tiene jardin?</label>
+        <input type="text" id="tieneJardin" name="tieneJardin" required>
+  
+        <label for="tieneGaraje">¿Tiene garaje?</label>
+        <input type="text" id="tieneGaraje" name="tieneGaraje" required>
+  
+        <label for="tienePatio">¿Tiene patio?</label>
+        <input type="text" id="tienePatio" name="tienePatio" required>
+  
+        <label for="tieneAscensor">¿Tiene ascensor?</label>
+        <input type="text" id="tieneAscensor" name="tieneAscensor" required>
+  
+        <label for="permiteMascotas">¿Permite mascotas?</label>
+        <input type="text" id="permiteMascotas" name="permiteMascotas" required>
+  
+        <input type="submit" value="Guardar">
+      </form>
+      </div>
+    </div>
   </div>
 
   <div class="tab-pane" id="requisitos2">
-    <h1>requisitos-especificos</h1>
+    <div class="form-box">
+      <div class="form-value">
+      <form action="guardar_cliente.php" method="POST" onsubmit="return validateForm()">
+      
+        <h2>Requisitos especificos</h2>
+        <label for="codInteresEsp">Codigo Interes Especifico:</label>
+        <input type="number" id="codInteresEsp" name="codInteresEsp" required>
+  
+        <label for="zonaEspecifica">Zona de especifica preferencia:</label>
+        <input type="text" id="zonaEspecifica" name="zonaEspecifica" required>
+  
+        <label for="presupuestoEsp">Presupuesto especifico:</label>
+        <input type="number" id="presupuestoEsp" name="presupuestoEsp" required>
+  
+        <label for="tienePatioGrande">¿Tiene patio grande?</label>
+        <input type="text" id="tienePatioGrande" name="tienePatioGrande" required>
+  
+        <label for="nrobanostina">Nro de tinas en banos</label>
+        <input type="number" id="nrobanostina" name="nrobanostina" required>
+  
+        <label for="cantidadAutosGaraje">Nro autos para garaje</label>
+        <input type="number" id="cantidadAutosGaraje" name="cantidadAutosGaraje" required>
+  
+        <label for="equipadoElectrodomest">Equipado con electrodomesticos:</label>
+        <input type="text" id="equipadoElectrodomest" name="equipadoElectrodomest" required>
+  
+        <input type="submit" value="Guardar">
+      </form>
+      </div>
   </div>
   </div>
   <div>
 
-  </div>
-  <div class="row">
-    <div class="col-sm-10 col-sm-offset-1">
-    <div class="wizard-footer height-wizard">
-        <div class="pull-right">
-            <input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm siguiente' name='next' value='Siguiente'/>
-            <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='Fin' />
-        </div>
-    </div>
-    </div>
   </div>
 
 </body>
